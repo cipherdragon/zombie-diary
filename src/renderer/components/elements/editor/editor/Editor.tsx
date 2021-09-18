@@ -86,7 +86,7 @@ export default class Editor extends PureComponent<Props, State> {
 		if (e.key === "Enter") {
 			return "enter";
 		}
-		return getDefaultKeyBinding(e);
+		return getDefaultKeyBinding(e as any);
 	}
 
 	textEditor: PluginEditor;
@@ -182,7 +182,7 @@ export default class Editor extends PureComponent<Props, State> {
 							<PluginEditor
 								editorState={titleEditorState}
 								handleKeyCommand={this.handleTitleKeyCommand}
-								keyBindingFn={Editor.titleKeyBindingFn}
+								keyBindingFn={Editor.titleKeyBindingFn as any}
 								onBlur={this.saveEntry}
 								onChange={this.onTitleChange}
 								placeholder={translations["add-a-title"]}

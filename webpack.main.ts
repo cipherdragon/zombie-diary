@@ -1,11 +1,11 @@
-import { CliConfigOptions, Configuration } from "webpack";
+import { Configuration } from "webpack";
 import merge from "webpack-merge";
 
 import base from "./webpack.base";
 
 export default (
 	env: string | Record<string, boolean | number | string>,
-	args: CliConfigOptions,
+	args: any,
 ): Configuration =>
 	// @ts-ignore
 	merge(base(env, args), {
