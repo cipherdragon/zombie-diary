@@ -7,7 +7,7 @@ import base from "./webpack.base";
 
 export default (
 	env: string | Record<string, boolean | number | string>,
-	args: any,
+	args: {config: string, mode: string, watch:boolean},
 ): Configuration =>
 	// @ts-ignore
 	merge(base(env, args), {

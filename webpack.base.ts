@@ -1,14 +1,13 @@
 import path from "path";
 
-//import LicenseCheckerWebpackPlugin from "license-checker-webpack-plugin";
+// import LicenseCheckerWebpackPlugin from "license-checker-webpack-plugin";
 import { Configuration } from "webpack";
 
 export default (
 	_: string | Record<string, boolean | number | string>,
-	args: any,
-): Configuration => {
-	// const configName = args.config[0].split(".")[2];
-	return {
+	args: {config: string, mode: string, watch:boolean},
+): Configuration => 
+	 ({
 		output: {
 			path: path.resolve(__dirname, "bundle"),
 		},
@@ -25,5 +24,5 @@ export default (
 				},
 			],
 		},
-	};
-};
+	})
+;
