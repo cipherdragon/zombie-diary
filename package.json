@@ -33,7 +33,6 @@
     "website:build:ts": "tsc --project ./website",
     "test": "run-s test:*",
     "test:jest": "jest",
-    "test:types": "tsc --noEmit && tsc --project ./website --noEmit",
     "lint:css": "stylelint --ignore-path ./.gitignore --max-warnings 0 \"**/*.{css,sass,scss}\"",
     "lint:css:fix": "yarn lint:css --fix",
     "lint:ts": "eslint --ext .ts,.tsx --ignore-path ./.gitignore --max-warnings 0 \"**/*.{ts,tsx}\"",
