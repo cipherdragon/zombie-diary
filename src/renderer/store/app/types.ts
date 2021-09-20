@@ -1,3 +1,5 @@
+/** @format */
+
 import { Action } from "redux";
 
 import { OverlayType } from "../../../shared/types";

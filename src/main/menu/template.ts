@@ -1,3 +1,5 @@
+/** @format */
+
 import { MenuItemConstructorOptions } from "electron";
 
 import { is } from "electron-util";

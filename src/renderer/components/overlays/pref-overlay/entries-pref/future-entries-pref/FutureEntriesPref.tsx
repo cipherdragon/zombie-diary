@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactElement } from "react";
 
 import { translations } from "../../../../../utils/i18n";

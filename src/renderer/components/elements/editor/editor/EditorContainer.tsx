@@ -1,3 +1,5 @@
+/** @format */
+
 import { connect } from "react-redux";
 
 import { updateEntry } from "../../../../store/file/actionCreators";

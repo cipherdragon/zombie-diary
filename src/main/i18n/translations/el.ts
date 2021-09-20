@@ -1,3 +1,5 @@
+/** @format */
+
 import { Translations } from "../../../shared/types";
 
 const translationsEl: Partial<Translations> = {

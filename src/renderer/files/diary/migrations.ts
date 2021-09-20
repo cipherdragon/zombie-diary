@@ -1,3 +1,5 @@
+/** @format */
+
 import semver from "semver";
 
 import { MiniDiaryJson } from "../../types";

@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { FunctionComponent } from "react";
 
 import EditorContainer from "../../elements/editor/editor/EditorContainer";

@@ -1,11 +1,13 @@
+/** @format */
+
 // forked from samuel meuli's eslint config
 
 module.exports = {
 	// Disable no-use-before-define rule and enabling @typescript-eslint/no-use-before-define
-	"no-use-before-define": "off",	
+	"no-use-before-define": "off",
 	"@typescript-eslint/no-use-before-define": ["error"],
 
-	// Disable ban-ts-comments rule. @ts-ignore annotation is there for a reason.
+	// Disable ban-ts-comments rule. This allows to use @ts-ignore
 	"@typescript-eslint/ban-ts-comment": "off",
 
 	// Enforce max line length for comments

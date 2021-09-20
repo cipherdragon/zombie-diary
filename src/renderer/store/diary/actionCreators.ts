@@ -1,3 +1,5 @@
+// No prettier: prettier mess up the code
+
 import { Moment } from "moment-timezone";
 
 import { MAX_DATE, MIN_DATE } from "../../constants";

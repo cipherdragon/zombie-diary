@@ -1,3 +1,5 @@
+/** @format */
+
 import { MenuItemConstructorOptions, shell } from "electron";
 
 import { translate } from "../../i18n/i18n";

@@ -1,3 +1,5 @@
+/** @format */
+
 import "./assets/styles/styles.scss";
 
 import React from "react";

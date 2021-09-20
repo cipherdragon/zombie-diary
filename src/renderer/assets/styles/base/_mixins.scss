@@ -1,3 +1,5 @@
+/** @format */
+
 @mixin themify($property, $color-id, $pre-args: null, $post-args: null) {
 	// Loop over themes
 	@each $theme, $colors in $themes {

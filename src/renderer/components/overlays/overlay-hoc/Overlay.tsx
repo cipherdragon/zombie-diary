@@ -1,3 +1,5 @@
+/** @format */
+
 import ClearIcon from "feather-icons/dist/icons/x.svg";
 import React, { PureComponent, ReactNode } from "react";
 
@@ -84,13 +86,11 @@ export default class Overlay extends PureComponent<Props, {}> {
 					className={`overlay-inner ${className || ""}`}
 					ref={(overlayElement: HTMLDivElement): void => {
 						this.overlayElement = overlayElement;
-					}}
-				>
+					}}>
 					<button
 						type="button"
 						className="button button-invisible overlay-close-button"
-						onClick={this.onClose}
-					>
+						onClick={this.onClose}>
 						<ClearIcon {...iconProps} title={translations.close} />
 					</button>
 					<div className="overlay-content">{children}</div>

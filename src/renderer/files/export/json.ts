@@ -1,3 +1,5 @@
+/** @format */
+
 import { Entries, MiniDiaryJson } from "../../types";
 import { getMetadata } from "../diary/diaryFile";
 import sortEntries from "./sortEntries";
@@ -6,7 +8,7 @@ import sortEntries from "./sortEntries";
  * Convert entries to a Mini Diary JSON string
  */
 export function convertToMiniDiaryJson(entries: Entries): Promise<string> {
-	return new Promise(resolve => {
+	return new Promise((resolve) => {
 		const entriesSorted = sortEntries(entries);
 		const entriesJson: Entries = {};
 

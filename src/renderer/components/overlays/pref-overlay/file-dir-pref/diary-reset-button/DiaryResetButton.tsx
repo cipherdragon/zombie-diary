@@ -1,3 +1,5 @@
+/** @format */
+
 import { remote } from "electron";
 
 import React, { ReactElement } from "react";
@@ -44,8 +46,7 @@ export default function DiaryResetButton(props: Props): ReactElement {
 			type="button"
 			className="button button-main"
 			disabled={!fileExists}
-			onClick={showResetPrompt}
-		>
+			onClick={showResetPrompt}>
 			{translations["reset-diary"]}
 		</button>
 	);

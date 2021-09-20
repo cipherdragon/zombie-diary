@@ -1,3 +1,5 @@
+/** @format */
+
 import { EditorState, RichUtils } from "draft-js";
 import BoldIcon from "feather-icons/dist/icons/bold.svg";
 import ItalicIcon from "feather-icons/dist/icons/italic.svg";
@@ -53,8 +55,7 @@ export default function FormattingButtons(props: Props): ReactElement {
 			<button
 				type="button"
 				className={`button button-invisible ${isBold ? "button-active" : ""}`}
-				onClick={onBoldClick}
-			>
+				onClick={onBoldClick}>
 				<BoldIcon
 					{...iconProps}
 					strokeWidth={isBold ? STROKE_WIDTH_SELECTED : STROKE_WIDTH_DEFAULT}
@@ -64,8 +65,7 @@ export default function FormattingButtons(props: Props): ReactElement {
 			<button
 				type="button"
 				className={`button button-invisible ${isItalic ? "button-active" : ""}`}
-				onClick={onItalicClick}
-			>
+				onClick={onItalicClick}>
 				<ItalicIcon
 					{...iconProps}
 					strokeWidth={isItalic ? STROKE_WIDTH_SELECTED : STROKE_WIDTH_DEFAULT}
@@ -75,8 +75,7 @@ export default function FormattingButtons(props: Props): ReactElement {
 			<button
 				type="button"
 				className={`button button-invisible ${isUl ? "button-active" : ""}`}
-				onClick={onUlClick}
-			>
+				onClick={onUlClick}>
 				<UlIcon
 					{...iconProps}
 					strokeWidth={isUl ? STROKE_WIDTH_SELECTED : STROKE_WIDTH_DEFAULT}
@@ -86,8 +85,7 @@ export default function FormattingButtons(props: Props): ReactElement {
 			<button
 				type="button"
 				className={`button button-invisible ${isOl ? "button-active" : ""}`}
-				onClick={onOlClick}
-			>
+				onClick={onOlClick}>
 				<OlIcon
 					{...iconProps}
 					strokeWidth={isOl ? STROKE_WIDTH_SELECTED : STROKE_WIDTH_DEFAULT}

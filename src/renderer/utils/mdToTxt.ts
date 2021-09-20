@@ -1,3 +1,5 @@
+/** @format */
+
 import remark from "remark";
 import stringify from "remark-stringify";
 import strip from "strip-markdown";

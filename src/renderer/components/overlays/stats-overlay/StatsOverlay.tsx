@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { PureComponent, ReactNode } from "react";
 import countWords from "word-count";
 
@@ -99,19 +101,27 @@ export default class StatsOverlay extends PureComponent<Props, {}> {
 				<table>
 					<tbody>
 						<tr>
-							<td className="stat-number">{StatsOverlay.formatNum(stats.nrEntries)}</td>
+							<td className="stat-number">
+								{StatsOverlay.formatNum(stats.nrEntries)}
+							</td>
 							<td className="stat-label">{translations["total-entries"]}</td>
 						</tr>
 						<tr>
-							<td className="stat-number">{StatsOverlay.formatNum(stats.avgEntriesPerWeek)}</td>
+							<td className="stat-number">
+								{StatsOverlay.formatNum(stats.avgEntriesPerWeek)}
+							</td>
 							<td className="stat-label">{translations["entries-per-week"]}</td>
 						</tr>
 						<tr>
-							<td className="stat-number">{StatsOverlay.formatNum(stats.longestStreak)}</td>
+							<td className="stat-number">
+								{StatsOverlay.formatNum(stats.longestStreak)}
+							</td>
 							<td className="stat-label">{translations["streak-best"]}</td>
 						</tr>
 						<tr>
-							<td className="stat-number">{StatsOverlay.formatNum(stats.currentStreak)}</td>
+							<td className="stat-number">
+								{StatsOverlay.formatNum(stats.currentStreak)}
+							</td>
 							<td className="stat-label">{translations["streak-current"]}</td>
 						</tr>
 						<tr>
@@ -119,7 +129,9 @@ export default class StatsOverlay extends PureComponent<Props, {}> {
 							<td className="stat-label">{translations["total-words"]}</td>
 						</tr>
 						<tr>
-							<td className="stat-number">{StatsOverlay.formatNum(stats.avgWordsPerEntry)}</td>
+							<td className="stat-number">
+								{StatsOverlay.formatNum(stats.avgWordsPerEntry)}
+							</td>
 							<td className="stat-label">{translations["words-per-entry"]}</td>
 						</tr>
 					</tbody>

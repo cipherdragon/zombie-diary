@@ -1,3 +1,5 @@
+/** @format */
+
 import logger from "electron-log";
 import unhandled from "electron-unhandled";
 
@@ -7,7 +9,7 @@ export function initLogger(): void {
 
 	// Catch unhandled errors and promise rejections, log them instead of crashing
 	unhandled({
-		logger: err => logger.error(err),
+		logger: (err) => logger.error(err),
 		showDialog: false,
 	});
 }

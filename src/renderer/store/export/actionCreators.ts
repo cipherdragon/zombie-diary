@@ -1,3 +1,5 @@
+// No prettier: Breaking up single line arrow functions and chains to multiple lines
+
 import { remote } from "electron";
 
 import logger from "electron-log";
@@ -65,11 +67,11 @@ const exportToFile = (
 		// Sort and convert entries to the specified format, then write them to disk
 		const { entries } = getState().file;
 		converterFunc(entries)
-			.then(entriesConverted => {
+			.then((entriesConverted) => {
 				writeFile(filePath, entriesConverted);
 				dispatch(setExportSuccess());
 			})
-			.catch(err => {
+			.catch((err) => {
 				logger.error("Error exporting diary file: ", err);
 				dispatch(setExportError(err.toString()));
 			});

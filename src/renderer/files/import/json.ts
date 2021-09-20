@@ -1,3 +1,5 @@
+// No prettier: prettier mess up the code
+
 import {
 	DayOneEntry,
 	DayOneJson,

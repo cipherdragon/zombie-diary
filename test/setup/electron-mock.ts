@@ -1,3 +1,5 @@
+/** @format */
+
 // Mock Electron functions (because the Electron process is not available during testing)
 module.exports = {
 	remote: {

@@ -1,3 +1,5 @@
+/** @format */
+
 // copied from Samuel Meuli's eslint config
 
 module.exports = {
@@ -18,10 +20,10 @@ module.exports = {
 	"@typescript-eslint/ban-types": [
 		"error",
 		{
-		  "extendDefaults": true,
-		  "types": {
-			"{}": false
-		  }
-		}
+			extendDefaults: true,
+			types: {
+				"{}": false,
+			},
+		},
 	],
 };

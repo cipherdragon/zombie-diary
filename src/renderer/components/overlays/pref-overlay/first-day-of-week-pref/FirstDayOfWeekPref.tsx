@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ChangeEvent, ReactElement } from "react";
 
 import { Weekday } from "../../../../types";
@@ -42,8 +44,7 @@ export default function FirstDayOfWeekPref(props: Props): ReactElement {
 					id="weekday-select"
 					className="button button-main"
 					value={firstDayOfWeek ?? "auto"}
-					onChange={onChange}
-				>
+					onChange={onChange}>
 					<option value="auto">{translations.auto}</option>
 					{weekdayOptions}
 				</select>

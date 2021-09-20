@@ -1,3 +1,5 @@
+/** @format */
+
 import MockDate from "mockdate";
 import moment from "moment-timezone";
 

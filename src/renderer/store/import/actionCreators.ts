@@ -1,3 +1,5 @@
+// No prettier: Breaking up single line arrow functions and chains to multiple lines
+
 import logger from "electron-log";
 
 import { readFile } from "../../files/fileAccess";

@@ -1327,11 +1327,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@samuelmeuli/prettier-config@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@samuelmeuli/prettier-config/-/prettier-config-2.0.1.tgz#388e598587a413978611b59d5b8ee56c7d22bd12"
-  integrity sha512-K9Xr+CS/UvQ+8gkKkPfupPLXxZj8s0kLz9ZOo+6V0QJmOj/VEJdaGR+0cVCDQXDFcOdzdP11O/KrbOgjniWb2w==
-
 "@samuelmeuli/stylelint-config@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@samuelmeuli/stylelint-config/-/stylelint-config-3.0.0.tgz#f29ddc2d4cca57b8bdca1aac23621ef8369c77c5"

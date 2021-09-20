@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactElement } from "react";
 
 import { ThemePref } from "../../../../types";

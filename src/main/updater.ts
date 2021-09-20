@@ -1,3 +1,5 @@
+/** @format */
+
 import logger from "electron-log";
 import { autoUpdater } from "electron-updater";
 import { is } from "electron-util";

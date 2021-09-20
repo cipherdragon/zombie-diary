@@ -1,3 +1,5 @@
+/** @format */
+
 import { app, BrowserWindow } from "electron";
 import path from "path";
 
@@ -52,14 +54,11 @@ app.on("window-all-closed", (): void => {
 });
 
 // On app activation (e.g. when clicking dock icon), re-create BrowserWindow if necessary
-app.on(
-	"activate",
-	async (): Promise<void> => {
-		if (!getWindow()) {
-			setWindow(await createWindow());
-		}
-	},
-);
+app.on("activate", async (): Promise<void> => {
+	if (!getWindow()) {
+		setWindow(await createWindow());
+	}
+});
 
 (async (): Promise<void> => {
 	// Wait for Electron to be initialized

@@ -1,3 +1,5 @@
+/** @format */
+
 import { Entries } from "../../types";
 import { fromIndexDate, toDayOneDate } from "../../utils/dateFormat";
 import mdToTxt from "../../utils/mdToTxt";

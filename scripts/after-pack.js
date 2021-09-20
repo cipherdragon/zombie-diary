@@ -22,6 +22,8 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
+ *
+ * @format
  */
 
 // TODO: Remove script once https://github.com/electron/electron/issues/17972 is solved by
@@ -41,11 +43,11 @@ const exec = async function exec(cmd, args = []) {
 	await waitFor(child);
 };
 
-const redirectOutputFor = child => {
-	const printStdout = data => {
+const redirectOutputFor = (child) => {
+	const printStdout = (data) => {
 		process.stdout.write(data.toString());
 	};
-	const printStderr = data => {
+	const printStderr = (data) => {
 		process.stderr.write(data.toString());
 	};
 	child.stdout.on("data", printStdout);
@@ -57,16 +59,16 @@ const redirectOutputFor = child => {
 	});
 };
 
-const waitFor = async function(child) {
-	return new Promise(resolve => {
+const waitFor = async function (child) {
+	return new Promise((resolve) => {
 		child.once("close", () => resolve());
 	});
 };
 
-module.exports = async function(context) {
+module.exports = async function (context) {
 	console.warn("after build; disable sandbox");
 	const isLinux = context.targets.find(
-		target => target.name === "appImage" || target.name === "snap",
+		(target) => target.name === "appImage" || target.name === "snap",
 	);
 	if (!isLinux) {
 		return;

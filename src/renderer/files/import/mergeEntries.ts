@@ -1,3 +1,5 @@
+/** @format */
+
 import { DiaryEntry } from "../../types";
 
 const INLINE_SEPARATOR = " | ";

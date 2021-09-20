@@ -1,3 +1,5 @@
+/** @format */
+
 import { connect } from "react-redux";
 
 import { updateThemePref } from "../../../../store/app/actionCreators";

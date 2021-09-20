@@ -1,3 +1,5 @@
+/** @format */
+
 import { Moment } from "moment-timezone";
 import { Action } from "redux";
 

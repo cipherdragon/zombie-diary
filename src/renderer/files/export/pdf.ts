@@ -1,3 +1,5 @@
+/** @format */
+
 import { mdToPdfBuffer } from "electron-md-to-pdf";
 
 import { Entries } from "../../types";

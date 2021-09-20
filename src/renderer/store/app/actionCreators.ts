@@ -1,3 +1,5 @@
+/** @format */
+
 import { OverlayType } from "../../../shared/types";
 import {
 	saveFirstDayOfWeekPref,
@@ -102,38 +104,42 @@ export function setThemePref(themePref: ThemePref): SetThemePrefAction {
 
 // Thunks
 
-export const updateSpellcheckPref = (enableSpellcheck: boolean): ThunkActionT => (
-	dispatch,
-): void => {
-	dispatch(setEnableSpellcheck(enableSpellcheck));
-	saveSpellcheckPref(enableSpellcheck);
-};
+export const updateSpellcheckPref =
+	(enableSpellcheck: boolean): ThunkActionT =>
+	(dispatch): void => {
+		dispatch(setEnableSpellcheck(enableSpellcheck));
+		saveSpellcheckPref(enableSpellcheck);
+	};
 
-export const updateFutureEntriesPref = (allowFutureEntries: boolean): ThunkActionT => (
-	dispatch,
-): void => {
-	dispatch(setAllowFutureEntries(allowFutureEntries));
-	saveFutureEntriesPref(allowFutureEntries);
-};
+export const updateFutureEntriesPref =
+	(allowFutureEntries: boolean): ThunkActionT =>
+	(dispatch): void => {
+		dispatch(setAllowFutureEntries(allowFutureEntries));
+		saveFutureEntriesPref(allowFutureEntries);
+	};
 
-export const updateHideTitlesPref = (hideTitles: boolean): ThunkActionT => (dispatch): void => {
-	dispatch(setHideTitles(hideTitles));
-	saveHideTitlesPref(hideTitles);
-};
+export const updateHideTitlesPref =
+	(hideTitles: boolean): ThunkActionT =>
+	(dispatch): void => {
+		dispatch(setHideTitles(hideTitles));
+		saveHideTitlesPref(hideTitles);
+	};
 
-export const updateFirstDayOfWeekPref = (firstDayOfWeek: Weekday | null): ThunkActionT => (
-	dispatch,
-): void => {
-	dispatch(setFirstDayOfWeek(firstDayOfWeek));
-	saveFirstDayOfWeekPref(firstDayOfWeek);
-};
+export const updateFirstDayOfWeekPref =
+	(firstDayOfWeek: Weekday | null): ThunkActionT =>
+	(dispatch): void => {
+		dispatch(setFirstDayOfWeek(firstDayOfWeek));
+		saveFirstDayOfWeekPref(firstDayOfWeek);
+	};
 
-export const updateThemePref = (themePref: ThemePref): ThunkActionT => (dispatch): void => {
-	// Apply theme to app
-	const theme = getThemeFromPref(themePref);
-	dispatch(setTheme(theme));
+export const updateThemePref =
+	(themePref: ThemePref): ThunkActionT =>
+	(dispatch): void => {
+		// Apply theme to app
+		const theme = getThemeFromPref(themePref);
+		dispatch(setTheme(theme));
 
-	// Update theme preference in state and preferences file
-	dispatch(setThemePref(themePref));
-	saveThemePref(themePref);
-};
+		// Update theme preference in state and preferences file
+		dispatch(setThemePref(themePref));
+		saveThemePref(themePref);
+	};

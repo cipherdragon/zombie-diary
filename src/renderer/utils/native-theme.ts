@@ -1,3 +1,5 @@
+/** @format */
+
 import { release } from "os";
 
 import { darkMode, is } from "electron-util";

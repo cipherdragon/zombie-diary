@@ -1,3 +1,5 @@
+/** @format */
+
 import { BrowserWindow } from "electron";
 
 let window: BrowserWindow; // Prevent window from being garbage collected

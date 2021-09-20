@@ -1,3 +1,5 @@
+/** @format */
+
 import PrevIcon from "feather-icons/dist/icons/chevron-left.svg";
 import NextIcon from "feather-icons/dist/icons/chevron-right.svg";
 import { Moment } from "moment-timezone";
@@ -21,12 +23,13 @@ export interface DispatchProps {
 type Props = StateProps & DispatchProps;
 
 export default function CalendarNav(props: Props): ReactElement {
+	// prettier-ignore
 	const {
-		allowFutureEntries,
-		dateSelected,
-		setMonthSelectedNext,
-		setMonthSelectedPrevious,
-	} = props;
+		allowFutureEntries, 
+		dateSelected, 
+		setMonthSelectedNext, 
+		setMonthSelectedPrevious
+	} =	props;
 
 	const today = createDate();
 
@@ -43,8 +46,7 @@ export default function CalendarNav(props: Props): ReactElement {
 				type="button"
 				className="button button-invisible"
 				disabled={!canClickPrev}
-				onClick={setMonthSelectedPrevious}
-			>
+				onClick={setMonthSelectedPrevious}>
 				<PrevIcon {...iconProps} title={translations["previous-month"]} />
 			</button>
 			<h1 className="month-name">{toMonthYear(dateSelected)}</h1>
@@ -52,8 +54,7 @@ export default function CalendarNav(props: Props): ReactElement {
 				type="button"
 				className="button button-invisible"
 				disabled={!canClickNext}
-				onClick={setMonthSelectedNext}
-			>
+				onClick={setMonthSelectedNext}>
 				<NextIcon {...iconProps} title={translations["next-month"]} />
 			</button>
 		</div>

@@ -1,3 +1,5 @@
+# @format
+
 name: Lint
 
 on:
@@ -25,4 +27,3 @@ jobs:
         run: |
           yarn lint:css
           yarn lint:ts
-          yarn format

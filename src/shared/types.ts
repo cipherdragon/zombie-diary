@@ -1,3 +1,5 @@
+/** @format */
+
 // General types
 
 export interface JsonObject {

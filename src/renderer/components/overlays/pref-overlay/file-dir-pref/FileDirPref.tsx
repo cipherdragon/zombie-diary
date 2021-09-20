@@ -1,3 +1,5 @@
+/** @format */
+
 import { remote } from "electron";
 
 import logger from "electron-log";
@@ -93,9 +95,10 @@ export default function FileDirPref(props: Props): ReactElement {
 							<button
 								type="button"
 								className="button button-main"
-								onClick={isLocked ? selectDir : selectMoveDir}
-							>
-								{isLocked ? translations["change-directory"] : translations["move-file"]}
+								onClick={isLocked ? selectDir : selectMoveDir}>
+								{isLocked
+									? translations["change-directory"]
+									: translations["move-file"]}
 							</button>
 						</>
 					)}

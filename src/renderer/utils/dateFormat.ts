@@ -1,3 +1,5 @@
+/** @format */
+
 import moment, { Moment, MomentFormatSpecification } from "moment-timezone";
 
 import { IndexDate } from "../types";

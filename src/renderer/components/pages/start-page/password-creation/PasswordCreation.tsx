@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ChangeEvent, FormEvent, PureComponent, ReactNode } from "react";
 
 import { translations } from "../../../../utils/i18n";
@@ -87,8 +89,7 @@ export default class PasswordCreation extends PureComponent<Props, State> {
 					<button
 						type="submit"
 						disabled={!password1 || !password2 || !passwordsMatch}
-						className="button button-main"
-					>
+						className="button button-main">
 						{translations["set-password"]}
 					</button>
 				</form>

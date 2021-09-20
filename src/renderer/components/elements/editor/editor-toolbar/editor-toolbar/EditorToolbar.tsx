@@ -1,3 +1,5 @@
+/** @format */
+
 import { EditorState } from "draft-js";
 import React, { ReactElement } from "react";
 
@@ -20,8 +22,7 @@ export default function EditorToolbar(props: Props): ReactElement {
 			onMouseDown={(e): void => {
 				e.preventDefault(); // Keep focus on editor when a button is clicked
 			}}
-			role="none"
-		>
+			role="none">
 			<FormattingButtons onTextChange={onTextChange} textEditorState={textEditorState} />
 			<WordCountWrapper />
 		</div>

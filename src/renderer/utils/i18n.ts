@@ -1,3 +1,5 @@
+/** @format */
+
 import moment from "moment-timezone";
 
 import { Translations } from "../../shared/types";

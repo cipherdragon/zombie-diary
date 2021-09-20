@@ -1,3 +1,5 @@
+/** @format */
+
 import { remote } from "electron";
 
 import settings from "electron-settings";

@@ -1,3 +1,5 @@
+/** @format */
+
 import { remote } from "electron";
 
 import logger from "electron-log";
@@ -12,7 +14,9 @@ const fields = {
 	jsonDayOne: {
 		title: translate("import-from-format", { format: "JSON (Day One)" }),
 		extension: "json",
-		instructions: <p>{translate("import-instructions-day-one", { appName, format: "JSON" })}</p>,
+		instructions: (
+			<p>{translate("import-instructions-day-one", { appName, format: "JSON" })}</p>
+		),
 	},
 	jsonJrnl: {
 		title: translate("import-from-format", { format: "JSON (jrnl)" }),
@@ -99,7 +103,10 @@ export default class ImportOverlay extends PureComponent<Props, {}> {
 			<OverlayContainer className="import-overlay">
 				<h1>{fields[importFormat].title}</h1>
 				{fields[importFormat].instructions}
-				<button type="button" className="button button-main" onClick={this.selectAndImportFile}>
+				<button
+					type="button"
+					className="button button-main"
+					onClick={this.selectAndImportFile}>
 					{translations["start-import"]}
 				</button>
 			</OverlayContainer>

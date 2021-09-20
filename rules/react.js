@@ -1,3 +1,5 @@
+/** @format */
+
 // copied from Samuel Meuli's eslint config
 
 module.exports = {

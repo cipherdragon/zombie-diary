@@ -1,3 +1,5 @@
+/** @format */
+
 // Diary
 
 export type IndexDate = string;

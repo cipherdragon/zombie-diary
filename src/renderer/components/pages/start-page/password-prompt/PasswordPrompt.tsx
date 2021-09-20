@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ChangeEvent, FormEvent, PureComponent, ReactNode } from "react";
 
 import { translations } from "../../../../utils/i18n";

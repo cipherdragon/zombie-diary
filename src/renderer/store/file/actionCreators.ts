@@ -1,3 +1,5 @@
+// No prettier: Breaking up single line arrow functions and chains to multiple lines
+
 import logger from "electron-log";
 
 import { disableMenuItems, enableMenuItems } from "../../electron/ipcRenderer/senders";
@@ -193,23 +195,22 @@ export const createEncryptedFile = (password: string): ThunkActionT => (dispatch
 /**
  * Write diary entries to disk
  */
-const writeEntriesEncrypted = (entries: Entries, hashedPassword: string): ThunkActionT => (
-	dispatch,
-): void => {
-	const filePath = getDiaryFilePath();
-	const fileContent: MiniDiaryJson = {
-		metadata: getMetadata(),
-		entries,
+const writeEntriesEncrypted = (entries: Entries, hashedPassword: string): ThunkActionT => 
+	(dispatch): void => {
+		const filePath = getDiaryFilePath();
+		const fileContent: MiniDiaryJson = {
+			metadata: getMetadata(),
+			entries,
+		};
+		dispatch(setEncryptInProgress());
+		try {
+			writeEncryptedFile(filePath, hashedPassword, JSON.stringify(fileContent));
+			dispatch(setEncryptSuccess(entries));
+		} catch (err) {
+			logger.error("Error updating encrypted diary file: ", err);
+			dispatch(setEncryptError(err.message));
+		}
 	};
-	dispatch(setEncryptInProgress());
-	try {
-		writeEncryptedFile(filePath, hashedPassword, JSON.stringify(fileContent));
-		dispatch(setEncryptSuccess(entries));
-	} catch (err) {
-		logger.error("Error updating encrypted diary file: ", err);
-		dispatch(setEncryptError(err.message));
-	}
-};
 
 /**
  * Delete the diary file in the currently selected directory
@@ -223,87 +224,84 @@ export const resetDiary = (): ThunkActionT => (dispatch): void => {
 /**
  * Write diary entries to disk with a new password. Update the password in the store
  */
-export const updatePassword = (newPassword: string): ThunkActionT => (dispatch, getState): void => {
-	const { entries } = getState().file;
-	const hashedPassword = hashPassword(newPassword);
-	dispatch(writeEntriesEncrypted(entries, hashedPassword));
-	dispatch(setHashedPassword(hashedPassword));
-};
+export const updatePassword = (newPassword: string): ThunkActionT =>
+	(dispatch, getState): void => {
+		const { entries } = getState().file;
+		const hashedPassword = hashPassword(newPassword);
+		dispatch(writeEntriesEncrypted(entries, hashedPassword));
+		dispatch(setHashedPassword(hashedPassword));
+	};
 
 /**
  * Update the diary entry in the state. Remove the entry if it is empty. Then write the diary to the
  * encrypted diary file and update the index
  */
-export const updateEntry = (entryDate: IndexDate, title: string, text: string): ThunkActionT => (
-	dispatch,
-	getState,
-): void => {
-	const { entries, hashedPassword } = getState().file;
-	const entriesUpdated = { ...entries };
+export const updateEntry = (entryDate: IndexDate, title: string, text: string): ThunkActionT => 
+	(dispatch, getState): void => {
+		const { entries, hashedPassword } = getState().file;
+		const entriesUpdated = { ...entries };
 
-	// Abort if password has been deleted from state (e.g. when the diary has been locked)
-	if (!hashedPassword) {
-		return;
-	}
-
-	if (title === "" && text === "") {
-		// Empty entry
-		if (entryDate in entries) {
-			// If existing entry: Delete entry from file and index
-			const entryRemoved = entriesUpdated[entryDate];
-			delete entriesUpdated[entryDate];
-			removeIndexDoc(entryDate, entryRemoved);
+		// Abort if password has been deleted from state (e.g. when the diary has been locked)
+		if (!hashedPassword) {
+			return;
 		}
-	} else if (!(entryDate in entries)) {
-		// Entry doesn't exist yet
-		const entryAdded = {
-			dateUpdated: createDate().toString(),
-			title,
-			text,
-		};
-		entriesUpdated[entryDate] = entryAdded;
-		addIndexDoc(entryDate, entryAdded);
-	} else if (
-		title !== entries[entryDate].title || // Title has changed
-		text !== entries[entryDate].text // Text has changed
-	) {
-		// Entry has been updated
-		const entryOld = entries[entryDate];
-		const entryUpdated = {
-			dateUpdated: createDate().toString(),
-			title,
-			text,
-		};
-		entriesUpdated[entryDate] = entryUpdated;
-		updateIndexDoc(entryDate, entryOld, entryUpdated);
-	} else {
-		return;
-	}
-	// Write entries to disk
-	dispatch(writeEntriesEncrypted(entriesUpdated, hashedPassword));
-};
+
+		if (title === "" && text === "") {
+			// Empty entry
+			if (entryDate in entries) {
+				// If existing entry: Delete entry from file and index
+				const entryRemoved = entriesUpdated[entryDate];
+				delete entriesUpdated[entryDate];
+				removeIndexDoc(entryDate, entryRemoved);
+			}
+		} else if (!(entryDate in entries)) {
+			// Entry doesn't exist yet
+			const entryAdded = {
+				dateUpdated: createDate().toString(),
+				title,
+				text,
+			};
+			entriesUpdated[entryDate] = entryAdded;
+			addIndexDoc(entryDate, entryAdded);
+		} else if (
+			title !== entries[entryDate].title || // Title has changed
+			text !== entries[entryDate].text // Text has changed
+		) {
+			// Entry has been updated
+			const entryOld = entries[entryDate];
+			const entryUpdated = {
+				dateUpdated: createDate().toString(),
+				title,
+				text,
+			};
+			entriesUpdated[entryDate] = entryUpdated;
+			updateIndexDoc(entryDate, entryOld, entryUpdated);
+		} else {
+			return;
+		}
+		// Write entries to disk
+		dispatch(writeEntriesEncrypted(entriesUpdated, hashedPassword));
+	};
 
 /**
  * Merge the provided diary JSON with the one in the Redux state. For each entry, use the new one if
  * none exists yet. Otherwise, append the new title and text to the existing ones
  */
-export const mergeUpdateFile = (newEntries: Entries): ThunkActionT => (
-	dispatch,
-	getState,
-): void => {
-	const { entries, hashedPassword } = getState().file;
-	const entriesUpdated = { ...entries };
+export const mergeUpdateFile = (newEntries: Entries): ThunkActionT =>
+	(dispatch, getState): void => {
+		const { entries, hashedPassword } = getState().file;
+		const entriesUpdated = { ...entries };
 
-	Object.entries(newEntries).forEach(([indexDate, newEntry]): void => {
-		if (indexDate in entriesUpdated) {
-			// Entry exists -> merge
-			const oldEntry = entriesUpdated[indexDate];
-			entriesUpdated[indexDate] = mergeEntries(oldEntry, newEntry);
-		} else {
-			// Entry does not exist yet -> add
-			entriesUpdated[indexDate] = newEntry;
-		}
-	});
-	dispatch(writeEntriesEncrypted(entriesUpdated, hashedPassword));
-	createIndex(entriesUpdated); // Recreate index
-};
+		Object.entries(newEntries).forEach(([indexDate, newEntry]): void => {
+			if (indexDate in entriesUpdated) {
+				// Entry exists -> merge
+				const oldEntry = entriesUpdated[indexDate];
+				entriesUpdated[indexDate] = mergeEntries(oldEntry, newEntry);
+			} else {
+				// Entry does not exist yet -> add
+				entriesUpdated[indexDate] = newEntry;
+			}
+		});
+		dispatch(writeEntriesEncrypted(entriesUpdated, hashedPassword));
+		createIndex(entriesUpdated); // Recreate index
+	};

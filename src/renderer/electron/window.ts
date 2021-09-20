@@ -1,3 +1,5 @@
+/** @format */
+
 import { remote } from "electron";
 
 const window = remote.getCurrentWindow();

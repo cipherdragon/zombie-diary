@@ -1,3 +1,5 @@
+/** @format */
+
 import { app, MenuItemConstructorOptions } from "electron";
 
 import { translate } from "../../i18n/i18n";

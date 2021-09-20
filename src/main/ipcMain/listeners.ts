@@ -1,3 +1,5 @@
+/** @format */
+
 import { ipcMain, IpcMainEvent } from "electron";
 
 import { Translations } from "../../shared/types";
@@ -13,7 +15,11 @@ export default function initIpcListeners(): void {
 
 	ipcMain.on(
 		"getTranslation",
-		(e: IpcMainEvent, i18nKey: keyof Translations, substitutions: Record<string, string>): void => {
+		(
+			e: IpcMainEvent,
+			i18nKey: keyof Translations,
+			substitutions: Record<string, string>,
+		): void => {
 			e.returnValue = translate(i18nKey, substitutions);
 		},
 	);

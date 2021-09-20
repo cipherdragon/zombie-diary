@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ChangeEvent, ReactElement, useState } from "react";
 
 import { translations } from "../../../../utils/i18n";
@@ -58,8 +60,7 @@ export default function PasswordPref(props: Props): ReactElement {
 					type="button"
 					disabled={!password1 || !password2 || !passwordsMatch}
 					onClick={onClick}
-					className="button button-main"
-				>
+					className="button button-main">
 					{translations["change-password"]}
 				</button>
 			</div>

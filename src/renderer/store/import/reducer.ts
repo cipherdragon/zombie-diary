@@ -1,3 +1,5 @@
+/** @format */
+
 import {
 	IMPORT_ERROR,
 	IMPORT_IN_PROGRESS,

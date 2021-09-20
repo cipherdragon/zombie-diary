@@ -1,3 +1,5 @@
+/** @format */
+
 import { createDate } from "../../utils/dateFormat";
 import {
 	DiaryAction,

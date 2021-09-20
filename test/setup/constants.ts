@@ -1,3 +1,5 @@
+/** @format */
+
 import path from "path";
 
 const DIR_TEST_FILES = path.resolve(__dirname, "..", "import-export", "files");

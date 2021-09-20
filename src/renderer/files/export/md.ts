@@ -1,3 +1,5 @@
+/** @format */
+
 import { Entries } from "../../types";
 import { fromIndexDate, toLocaleWeekday } from "../../utils/dateFormat";
 import sortEntries from "./sortEntries";

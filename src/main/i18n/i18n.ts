@@ -1,3 +1,5 @@
+/** @format */
+
 import { app } from "electron";
 
 import logger from "electron-log";
@@ -112,7 +114,10 @@ export function translate(
 	//   Function call: translate('test', { var: 'World' })
 	//   Result: 'Hello World'
 	Object.entries(substitutions).forEach(([toReplace, replacement]): void => {
-		translation = (translation as string).replace(new RegExp(`{${toReplace}}`, "g"), replacement);
+		translation = (translation as string).replace(
+			new RegExp(`{${toReplace}}`, "g"),
+			replacement,
+		);
 	});
 	return translation;
 }

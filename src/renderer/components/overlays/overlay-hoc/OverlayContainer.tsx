@@ -1,3 +1,5 @@
+/** @format */
+
 import { connect } from "react-redux";
 
 import { closeOverlay } from "../../../store/app/actionCreators";

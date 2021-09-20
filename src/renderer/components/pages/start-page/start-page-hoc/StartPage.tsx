@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { FunctionComponent, ReactNode } from "react";
 
 import appIcon from "../../../../assets/icons/app-icon.png";

@@ -1,3 +1,5 @@
+/** @format */
+
 import { MenuItemConstructorOptions } from "electron";
 
 import { translate } from "../../i18n/i18n";
@@ -45,7 +47,9 @@ export default function getFileMenu(): MenuItemConstructorOptions {
 						},
 					},
 					{
-						label: `${translate("import-from-format", { format: "JSON (Mini Diary)" })}…`,
+						label: `${translate("import-from-format", {
+							format: "JSON (Mini Diary)",
+						})}…`,
 						id: "importJsonMiniDiary",
 						click(): void {
 							importJsonMiniDiary();

@@ -1,3 +1,5 @@
+/** @format */
+
 import ClearIcon from "feather-icons/dist/icons/x.svg";
 import debounce from "lodash.debounce";
 import { Moment } from "moment-timezone";
@@ -96,8 +98,7 @@ export default class SearchBar extends PureComponent<Props, State> {
 							<button
 								type="button"
 								className="button button-invisible"
-								onClick={this.clearSearchKey}
-							>
+								onClick={this.clearSearchKey}>
 								<ClearIcon {...iconProps} title={translations.clear} />
 							</button>
 						</span>
@@ -107,8 +108,7 @@ export default class SearchBar extends PureComponent<Props, State> {
 					type="button"
 					className="button button-invisible button-today"
 					disabled={isToday}
-					onClick={this.onTodaySelection}
-				>
+					onClick={this.onTodaySelection}>
 					<TodayIcon {...iconProps} title={translations.today} />
 				</button>
 			</div>

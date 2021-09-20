@@ -1,3 +1,5 @@
+/** @format */
+
 import { Menu } from "electron";
 
 import getMenuTemplate from "./template";

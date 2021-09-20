@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { PureComponent, ReactNode } from "react";
 
 import CalendarContainer from "../calendar/CalendarContainer";

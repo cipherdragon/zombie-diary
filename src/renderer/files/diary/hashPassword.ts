@@ -1,3 +1,5 @@
+/** @format */
+
 import crypto from "crypto";
 
 const CIPHER = "sha512";

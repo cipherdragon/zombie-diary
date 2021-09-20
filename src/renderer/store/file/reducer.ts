@@ -1,3 +1,5 @@
+/** @format */
+
 import {
 	CLEAR_FILE_STATE,
 	DECRYPT_ERROR,

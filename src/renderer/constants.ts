@@ -1,3 +1,5 @@
+/** @format */
+
 import { fromIndexDate } from "./utils/dateFormat";
 
 // Dates

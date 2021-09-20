@@ -1,3 +1,5 @@
+/** @format */
+
 import { ipcRenderer } from "electron";
 
 import { Translations } from "../../../shared/types";

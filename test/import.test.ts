@@ -1,3 +1,5 @@
+/** @format */
+
 import fs from "fs";
 
 import {

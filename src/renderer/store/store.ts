@@ -1,3 +1,5 @@
+/** @format */
+
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { createLogger } from "redux-logger";
 import thunk, { ThunkAction, ThunkDispatch, ThunkMiddleware } from "redux-thunk";

@@ -1,3 +1,5 @@
+/** @format */
+
 import { Moment } from "moment-timezone";
 import React, { PureComponent, ReactNode } from "react";
 
@@ -45,8 +47,7 @@ export default class SearchResults extends PureComponent<Props, {}> {
 						<button
 							type="button"
 							className={`button ${isSelected ? "button-main" : ""}`}
-							onClick={(): void => setDateSelected(date)}
-						>
+							onClick={(): void => setDateSelected(date)}>
 							<p className="search-date text-faded">{toDateString(date)}</p>
 							<p className={`search-title ${!title ? "text-faded" : ""}`}>
 								{title || translations["no-title"]}
