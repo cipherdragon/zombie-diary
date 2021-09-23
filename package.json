@@ -1,7 +1,7 @@
 {
-	"name": "mini-diary",
-	"productName": "Mini Diary",
-	"version": "3.2.0",
+	"name": "zombie-diary",
+	"productName": "Zombie Diary",
+	"version": "0.0.0",
 	"description": "Simple and secure journal app",
 	"main": "./bundle/main.js",
 	"author": {
@@ -25,12 +25,6 @@
 		"build:ts": "run-p build:ts:*",
 		"build:ts:main": "webpack --config ./webpack.main.ts --mode production",
 		"build:ts:renderer": "webpack --config ./webpack.renderer.ts --mode production",
-		"website:start": "npm-run-all website:build:css --parallel website:start:*",
-		"website:start:serve": "serve ./website --listen 3000",
-		"website:start:ts": "tsc --project ./website --watch",
-		"website:build": "run-p website:build:*",
-		"website:build:css": "cp ./node_modules/minireset.css/minireset.min.css ./website/styles/",
-		"website:build:ts": "tsc --project ./website",
 		"test": "run-s test:*",
 		"test:jest": "jest",
 		"lint:css": "stylelint --ignore-path ./.gitignore --max-warnings 0 \"**/*.{css,sass,scss}\"",
