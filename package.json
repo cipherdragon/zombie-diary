@@ -9,7 +9,6 @@
 		"email": "adeepagunathilake@gmail.com"
 	},
 	"repository": "github:cipherdragon/zombie-diary",
-	"homepage": "https://minidiary.app",
 	"license": "MIT",
 	"private": true,
 	"scripts": {
