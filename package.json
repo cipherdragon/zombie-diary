@@ -5,7 +5,8 @@
 	"description": "Simple and secure journal app",
 	"main": "./bundle/main.js",
 	"author": {
-		"name": "Adeepa Gunathilake"
+		"name": "Adeepa Gunathilake",
+		"email": "adeepagunathilake@gmail.com"
 	},
 	"repository": "github:adeepagunathilake/zombie-diary",
 	"homepage": "https://minidiary.app",
@@ -32,7 +33,7 @@
 		"format": "prettier --ignore-path ./.gitignore --list-different \"**/*.{css,html,js,json,jsx,less,md,scss,ts,tsx,vue,yaml,yml}\"",
 		"format:fix": "yarn format --write",
 		"pack": "electron-builder --dir",
-		"dist": "electron-builder"
+		"dist": "electron-builder -lw"
 	},
 	"dependencies": {
 		"@svgr/webpack": "^5.5.0",
@@ -147,7 +148,7 @@
 		"extends": "@samuelmeuli/stylelint-config"
 	},
 	"build": {
-		"appId": "com.samuelmeuli.minidiary",
+		"appId": "com.zombiediary",
 		"files": [
 			"!**/*",
 			"./bundle/**/*"
@@ -216,7 +217,12 @@
 			"hardenedRuntime": false
 		},
 		"linux": {
-			"category": "Utility"
+			"category": "Utility",
+			"target": ["AppImage"],
+			"icon": "icon.png"
+		},
+		"win": {
+			"icon": "build/icon.png"
 		},
 		"dmg": {
 			"icon": false
