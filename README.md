@@ -9,8 +9,8 @@
 <br>
 
 **Zombie Diary is a simple, secure and attractive journal app. Writing a journal is fun and 
-enjoyable with Zombie Diary. Share your life stories with Zombie Diary. No matter how sensitive, emotional or private they are, Zombie Diary will keep them as a secrete. More importantly, Zombie 
-Diary is completely open source, no secrete in the code. No hidden backdoors, telemetry or spyware. Zombie Diary is the most trustworthy friend you will ever find.**
+enjoyable with Zombie Diary. Share your life stories with Zombie Diary. No matter how sensitive, emotional or private they are, Zombie Diary will keep them as a secret. More importantly, Zombie 
+Diary is completely open source, no secrets in the code. No hidden backdoors, telemetry or spyware. Zombie Diary is the most trustworthy friend you will ever find.**
 
 ### Features
 
