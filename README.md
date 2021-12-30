@@ -1,5 +1,10 @@
 <!-- @format -->
 
+# Notice about project development
+
+To any interested parties: I won't be able to do any development activity until Feb 2022 because of a personal matter. Time flies fast, so stay tuned.
+
+<br>
 <div align="center">
   <h1>Zombie Diary</h1>
   <img src="showcase/screenshot-1.jpg" style="max-width: 820px">
