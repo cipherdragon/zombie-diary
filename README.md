@@ -1,9 +1,5 @@
 <!-- @format -->
 
-# Notice about project development
-
-To any interested parties: I won't be able to do any development activity until Feb 2022 because of a personal matter. Time flies fast, so stay tuned.
-
 <br>
 <div align="center">
   <h1>Zombie Diary</h1>
