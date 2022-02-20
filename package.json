@@ -217,7 +217,9 @@
 		},
 		"linux": {
 			"category": "Utility",
-			"target": ["AppImage"],
+			"target": [
+				"AppImage"
+			],
 			"icon": "icon.png"
 		},
 		"win": {
