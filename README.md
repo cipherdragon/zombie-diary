@@ -49,6 +49,11 @@ call a man who exist in real world but also dead? Zombie?
 The application is built with Electron and React. To run or build the app yourself, you'll need to
 have Node.js and Yarn installed.
 
+**Notice: master branch is to be deleted. Since 2020, a lot happed in electron ecosystem. Most easiest
+way to migrate the project to electron 17 is to build app from scratch extracting code from mini-diary 
+project as much as possible. New code will be written in "main" branch. Reason I'm not deleting master 
+brance now is because it is where the current stable code is.**
+
 ### Running the app
 
 1. Clone this repository: `git clone REPO_URL`
